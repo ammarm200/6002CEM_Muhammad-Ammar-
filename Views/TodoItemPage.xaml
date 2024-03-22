@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TodoApp.Views.TodoItemPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="{Binding Name}">
+    <ContentPage.Content>
+        <StackLayout
+            Margin="20"
+            Spacing="10"
+            VerticalOptions="StartAndExpand">
+
+            <Label Text="Task Name"
+                   FontSize="18"
+                   FontAttributes="Bold"/>
+            <Entry Text="{Binding Name}" />
+
+            <Label Text="Task Notes"
+                   FontSize="18"
+                   FontAttributes="Bold"/>
+            <Entry Text="{Binding Notes}" />
+
+            <Label Text="Task Deadline"
+                   FontSize="18"
+                   FontAttributes="Bold"/>
+            <DatePicker Date="{Binding Deadline}" />
+
+            <StackLayout Orientation="Horizontal">
+                <Label
+                    Margin="0,10"
+                    HorizontalOptions="StartAndExpand"
+                    Text="Mark Done" 
+                    FontSize="16" FontAttributes="Bold" />
+                <Switch HorizontalOptions="EndAndExpand" IsToggled="{Binding Done}" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label
+                    HorizontalOptions="StartAndExpand"
+                    Text="Pin Task" 
+                    FontSize="16" FontAttributes="Bold" />
+                <Switch  HorizontalOptions="EndAndExpand" IsToggled="{Binding IsPinned}" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label
+                  HorizontalOptions="StartAndExpand"
+                  Text="Mark Important" 
+                  FontSize="16" FontAttributes="Bold" />
+                <Switch  HorizontalOptions="EndAndExpand" IsToggled="{Binding IsImportant}" />
+            </StackLayout>
+
+            <Button Clicked="OnSaveClicked" Text="Save" />
+
+            <Button Clicked="OnDeleteClicked" Text="Delete" />
+
+            <Button Clicked="OnCancelClicked" Text="Cancel" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
