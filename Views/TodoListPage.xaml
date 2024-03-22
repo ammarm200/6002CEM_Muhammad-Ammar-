@@ -22,7 +22,7 @@
                 FontAttributes="Bold"
                 VerticalOptions="CenterAndExpand" />
         </StackLayout>
-
+      
         <ListView
             x:Name="listView"
             Margin="18"
