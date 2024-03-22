@@ -6,7 +6,7 @@
     Title="Tasks Todo Notes">
     <ContentPage.ToolbarItems>
         <ToolbarItem    
-            Clicked="OnNewAdded" Text="Add+">
+            Clicked="OnNewAdded" Text="Add New+">
         </ToolbarItem>
     </ContentPage.ToolbarItems>
     <StackLayout>
