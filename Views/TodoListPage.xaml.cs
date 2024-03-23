@@ -67,7 +67,10 @@ namespace TodoApp.Views
                 // Delete completed tasks from the database
                 foreach (var item in completedItems)
                 {
-                    await TodoItemDatabase.Instance.DeleteItemAsync(item);
+                    var todoItem = (TodoItem)BindingContext;
+                    TodoItemDatabase database = await TodoItemDatabase.Instance;
+                    await database.DeleteItemAsync(todoItem);
+                    await Navigation.PopAsync();
                 }
             }
         }
