@@ -50,7 +50,7 @@ namespace TodoApp.Views
         }
 
 
-        private void OnClearCompletedClicked(object sender, EventArgs e)
+        private void (object sender, EventArgs e)
         {
             var todoItems = (listView.ItemsSource as ObservableCollection<TodoItem>);
 

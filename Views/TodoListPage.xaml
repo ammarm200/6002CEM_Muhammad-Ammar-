@@ -73,5 +73,10 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <Button
+            Grid.Row="2"
+            Text="Clear Completed"
+            Clicked="OnClearCompletedClicked"
+            Margin="20" />
     </StackLayout>
 </ContentPage>
