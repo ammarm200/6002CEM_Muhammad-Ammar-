@@ -49,7 +49,6 @@ namespace TodoApp.Views
             }
         }
 
-
         async private void OnClearCompletedClicked(object sender, EventArgs e)
         {
             var todoItems = (listView.ItemsSource as ObservableCollection<TodoItem>);
@@ -67,14 +66,13 @@ namespace TodoApp.Views
                 // Delete completed tasks from the database
                 foreach (var item in completedItems)
                 {
-                    var todoItem = (TodoItem)BindingContext;
                     TodoItemDatabase database = await TodoItemDatabase.Instance;
-                    await database.DeleteItemAsync(todoItem);
-                    await Navigation.PopAsync();
+                    await database.DeleteItemAsync(item);
                 }
             }
         }
-        
+
+
 
     }
 }
