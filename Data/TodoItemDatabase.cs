@@ -20,7 +20,7 @@ namespace TodoApp.Data
                 {
                     CreateTableResult result = await Database.CreateTableAsync<TodoItem>();
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
 
                     throw;
