@@ -74,9 +74,7 @@
             </ListView.ItemTemplate>
         </ListView>
         <Button
-            Grid.Row="2"
             Text="Delete Completed Tasks"
-            Clicked="OnDeleteCompletedClicked"
-            Margin="20" />
+            Clicked="OnDeleteCompletedClicked"/>
     </StackLayout>
 </ContentPage>
