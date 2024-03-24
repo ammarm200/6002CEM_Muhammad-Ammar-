@@ -1,0 +1,1 @@
+This Application is on Todo Task.Which gives user different options to take note their important work .User can have different features to save,delete task,cancel,mark done,mark pin,mark important,button to delete all done tasks at once etc
