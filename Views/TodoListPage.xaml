@@ -75,6 +75,7 @@
         </ListView>
         <Button
             Grid.Row="2"
+            BackgroundColor="OrangeRed"
             Text="Delete Completed Tasks"
             Clicked="OnDeleteCompletedClicked"/>
     </StackLayout>
