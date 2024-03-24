@@ -76,7 +76,7 @@
         <Button
             Grid.Row="2"
             Text="Delete Completed Tasks"
-            Clicked="OnClearCompletedClicked"
+            Clicked="OnDeleteCompletedClicked"
             Margin="20" />
     </StackLayout>
 </ContentPage>
