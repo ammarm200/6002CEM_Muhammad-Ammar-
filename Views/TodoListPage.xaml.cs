@@ -57,13 +57,11 @@ namespace TodoApp.Views
             {
                 var completedItems = todoItems.Where(item => item.Done).ToList();
 
-                // Remove completed tasks from the collection
                 foreach (var item in completedItems)
                 {
                     todoItems.Remove(item);
                 }
 
-                // Delete completed tasks from the database
                 foreach (var item in completedItems)
                 {
                     TodoItemDatabase database = await TodoItemDatabase.Instance;
