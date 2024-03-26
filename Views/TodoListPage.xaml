@@ -76,7 +76,8 @@
         <Button
             Grid.Row="2" Margin="22"
             BackgroundColor="Red"
-            Text="Delete Completed Tasks"
+            Text="Delete All Completed Tasks"
+            FontAttributes="Bold"
             Clicked="OnDeleteCompletedClicked"/>
     </StackLayout>
 </ContentPage>
