@@ -12,7 +12,7 @@
     <StackLayout>
         <StackLayout
             HeightRequest="60"
-            BackgroundColor="BlueViolet"
+            BackgroundColor="#512bdf"
             Padding="20,10"
             Orientation="Horizontal">
             <Label
