@@ -11,9 +11,9 @@
         <ToolbarItem Text="Filter">
             <ToolbarItem.Menu>
                 <Menu>
-                    <MenuItem Text="Done Tasks" Clicked="OnFilterDone" />
-                    <MenuItem Text="Important Tasks" Clicked="OnFilterImportant" />
-                    <MenuItem Text="Pinned Tasks" Clicked="OnFilterPinned" />
+                    <MenuItem Text="Only Done Tasks" Clicked="OnFilterDone" />
+                    <MenuItem Text="Only Important Tasks" Clicked="OnFilterImportant" />
+                    <MenuItem Text="Only Pinned Tasks" Clicked="OnFilterPinned" />
                 </Menu>
             </ToolbarItem.Menu>
         </ToolbarItem>
