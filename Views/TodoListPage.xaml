@@ -8,16 +8,6 @@
         <ToolbarItem    
             Clicked="OnNewAdded" Text="Add+">
         </ToolbarItem>
-        <ToolbarItem Text="Filter">
-            <ToolbarItem.Menu>
-                <Menu>
-                    <MenuItem Text="Only Done Tasks" Clicked="OnFilterDone" />
-                    <MenuItem Text="Only Important Tasks" Clicked="OnFilterImportant" />
-                    <MenuItem Text="Only Pinned Tasks" Clicked="OnFilterPinned" />
-                    <MenuItem Text="Show All Tasks" Clicked="OnFilterAll" />
-                </Menu>
-            </ToolbarItem.Menu>
-        </ToolbarItem>
     </ContentPage.ToolbarItems>
     <StackLayout>
         <StackLayout
