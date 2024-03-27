@@ -8,10 +8,9 @@
         <ToolbarItem    
             Clicked="OnNewAdded" Text="Add+">
         </ToolbarItem>
-        <ContentPage.ToolbarItems>
-            <ToolbarItem Text="Filter" Clicked="OnFilterClicked" />
-        </ContentPage.ToolbarItems>
-
+        <ToolbarItem   
+            Text="Filter" Clicked="OnFilterClicked">
+        </ToolbarItem>
     </ContentPage.ToolbarItems>
     <StackLayout>
         <StackLayout
