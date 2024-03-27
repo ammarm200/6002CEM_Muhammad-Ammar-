@@ -78,22 +78,23 @@ namespace TodoApp.Views
 
         private void ApplyFilter(string filter)
         {
+            var todoItems = (listView.ItemsSource as ObservableCollection<TodoItem>);
             if (filter == null) return;
 
             switch (filter)
             {
                 case "Done tasks":
-                    listView.ItemsSource = todoitems.Where(task => task.Done).ToList();
+                    listView.ItemsSource = todoItems.Where(task => task.Done).ToList();
                     break;
                 case "Important tasks":
-                    listView.ItemsSource = todoitems.Where(task => task.IsImportant).ToList();
+                    listView.ItemsSource = todoItems.Where(task => task.IsImportant).ToList();
                     break;
                 case "Pin tasks":
-                    listView.ItemsSource = todoitems.Where(task => task.IsPinned).ToList();
+                    listView.ItemsSource = todoItems.Where(task => task.IsPinned).ToList();
                     break;
                 // Handle other filters as needed
                 default:
-                    listView.ItemsSource = todoitems; // or apply another default filter
+                    listView.ItemsSource = todoItems; // or apply another default filter
                     break;
             }
         }
