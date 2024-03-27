@@ -70,6 +70,33 @@ namespace TodoApp.Views
             }
         }
 
+        public async void OnFilterClicked(object sender, EventArgs e)
+        {
+            var action = await DisplayActionSheet("Filter Tasks", "Cancel", null, "Done tasks", "Important tasks", "Pin tasks");
+            ApplyFilter(action);
+        }
+
+        private void ApplyFilter(string filter)
+        {
+            if (filter == null) return;
+
+            switch (filter)
+            {
+                case "Done tasks":
+                    listView.ItemsSource = todoitems.Where(task => task.Done).ToList();
+                    break;
+                case "Important tasks":
+                    listView.ItemsSource = todoitems.Where(task => task.IsImportant).ToList();
+                    break;
+                case "Pin tasks":
+                    listView.ItemsSource = todoitems.Where(task => task.IsPinned).ToList();
+                    break;
+                // Handle other filters as needed
+                default:
+                    listView.ItemsSource = todoitems; // or apply another default filter
+                    break;
+            }
+        }
 
 
     }
