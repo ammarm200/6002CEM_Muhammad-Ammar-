@@ -92,8 +92,8 @@ namespace TodoApp.Views
                 case "Only Pin tasks":
                     listView.ItemsSource = todoItems.Where(task => task.IsPinned).ToList();
                     break;
-                
-                case "All Tasks"
+
+                case "All Tasks":
                     listView.ItemsSource = todoItems; 
                     break;
             }
