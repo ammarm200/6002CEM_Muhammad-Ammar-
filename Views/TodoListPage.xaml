@@ -52,7 +52,7 @@
                                 FontAttributes="Italic"/>
 
                             <Image
-                                HorizontalOptions="End"
+                                HorizontalOptions="Start"
                                 IsVisible="{Binding Done}"
                                 Source="done.png"
                                 WidthRequest="20"
@@ -76,6 +76,12 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <Button
+            Grid.Row="2" Margin="22"
+            BackgroundColor="Red"
+            Text="Filter Tasks"
+            FontAttributes="Bold"
+            Clicked="OnFilterClicked"/>
         <Button
             Grid.Row="2" Margin="22"
             BackgroundColor="Red"
