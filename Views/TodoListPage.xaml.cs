@@ -69,6 +69,9 @@ namespace TodoApp.Views
                 }
             }
         }
+        private ObservableCollection<TodoItem> TodoItems = new ObservableCollection<TodoItem>();
+       
+
 
         public async void OnFilterClicked(object sender, EventArgs e)
         {
