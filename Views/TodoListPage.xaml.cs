@@ -72,7 +72,7 @@ namespace TodoApp.Views
 
         public async void OnFilterClicked(object sender, EventArgs e)
         {
-            var action = await DisplayActionSheet("Filter Tasks", "Cancel", null, "Done tasks", "Important tasks", "Pin tasks");
+            var action = await DisplayActionSheet("Filter Tasks", "Cancel", null, "Only Done tasks", "Only Important tasks", "Only Pin tasks","All Tasks");
             ApplyFilter(action);
         }
 
@@ -92,8 +92,8 @@ namespace TodoApp.Views
                 case "Pin tasks":
                     listView.ItemsSource = todoItems.Where(task => task.IsPinned).ToList();
                     break;
-                // Handle other filters as needed
-                default:
+                
+                case "All Tasks"
                     listView.ItemsSource = todoItems; // or apply another default filter
                     break;
             }
