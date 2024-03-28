@@ -80,23 +80,25 @@ namespace TodoApp.Views
         {
             var todoItems = (listView.ItemsSource as ObservableCollection<TodoItem>);
             if (filter == null) return;
+            IEnumerable<TodoItem> filteredItems = null;
 
             switch (filter)
             {
                 case "Only Done tasks":
-                    listView.ItemsSource = todoItems.Where(task => task.Done).ToList();
+                    filteredItems = todoItems.Where(task => task.Done).ToList();
                     break;
                 case "Only Important tasks":
-                    listView.ItemsSource = todoItems.Where(task => task.IsImportant).ToList();
+                    filteredItems = todoItems.Where(task => task.IsImportant).ToList();
                     break;
                 case "Only Pin tasks":
-                    listView.ItemsSource = todoItems.Where(task => task.IsPinned).ToList();
+                    filteredItems = todoItems.Where(task => task.IsPinned).ToList();
                     break;
 
                 case "All Tasks":
-                    listView.ItemsSource = todoItems; 
+                    filteredItems = todoItems; 
                     break;
             }
+            listView.ItemsSource = new ObservableCollection<TodoItem>(filteredItems);
         }
 
 
