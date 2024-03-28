@@ -83,7 +83,7 @@ namespace TodoApp.Views
         {
             var todoItems = (listView.ItemsSource as ObservableCollection<TodoItem>);
             if (filter == null) return;
-            IEnumerable<TodoItem> filteredItems = todoItems;
+            IEnumerable<TodoItem> filteredItems = null;
 
             switch (filter)
             {
