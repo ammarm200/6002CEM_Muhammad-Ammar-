@@ -83,18 +83,18 @@ namespace TodoApp.Views
 
             switch (filter)
             {
-                case "Done tasks":
+                case "Only Done tasks":
                     listView.ItemsSource = todoItems.Where(task => task.Done).ToList();
                     break;
-                case "Important tasks":
+                case "Only Important tasks":
                     listView.ItemsSource = todoItems.Where(task => task.IsImportant).ToList();
                     break;
-                case "Pin tasks":
+                case "Only Pin tasks":
                     listView.ItemsSource = todoItems.Where(task => task.IsPinned).ToList();
                     break;
                 
                 case "All Tasks"
-                    listView.ItemsSource = todoItems; // or apply another default filter
+                    listView.ItemsSource = todoItems; 
                     break;
             }
         }
