@@ -5,11 +5,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="Tasks Todo Notes">
     <ContentPage.ToolbarItems>
-        <ToolbarItem   
-            Text="Filter" Clicked="OnFilterClicked">
-        </ToolbarItem>
         <ToolbarItem    
-            Clicked="OnNewAdded" Text="Add+">
+            Clicked="OnNewAdded" Text="Add New+">
         </ToolbarItem>
     </ContentPage.ToolbarItems>
     <StackLayout>
@@ -52,7 +49,7 @@
                                 FontAttributes="Italic"/>
 
                             <Image
-                                HorizontalOptions="End"
+                                HorizontalOptions="Start"
                                 IsVisible="{Binding Done}"
                                 Source="done.png"
                                 WidthRequest="20"
@@ -76,11 +73,19 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Button
-            Grid.Row="2" Margin="22"
-            BackgroundColor="Red"
-            Text="Delete All Completed Tasks"
-            FontAttributes="Bold"
-            Clicked="OnDeleteCompletedClicked"/>
+        <StackLayout Orientation="Vertical" VerticalOptions="End" Spacing="10" Margin="20">
+            <Button
+                  
+                  BackgroundColor="DarkGreen"
+                  Text="Filter Tasks"
+                  FontAttributes="Bold"
+                  Clicked="OnFilterClicked"/>
+            <Button
+                  
+                  BackgroundColor="Red"
+                  Text="Delete All Completed Tasks"
+                  FontAttributes="Bold"
+                  Clicked="OnDeleteCompletedClicked"/>
+        </StackLayout>
     </StackLayout>
 </ContentPage>
