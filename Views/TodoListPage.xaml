@@ -51,7 +51,7 @@
                             <Image
                                 HorizontalOptions="Start"
                                 IsVisible="{Binding Done}"
-                                Source="done.png"
+                                Source="donenew.png"
                                 WidthRequest="20"
                                 HeightRequest="20"/>
 

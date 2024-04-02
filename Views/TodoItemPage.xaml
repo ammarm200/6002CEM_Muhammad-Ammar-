@@ -6,7 +6,7 @@
     Title="{Binding Name}">
     <ContentPage.Content>
         <StackLayout
-            Margin="20"
+            Margin="21"
             Spacing="10"
             VerticalOptions="StartAndExpand">
 
@@ -30,7 +30,7 @@
                     Margin="0,10"
                     HorizontalOptions="StartAndExpand"
                     Text="Mark Done" 
-                    FontSize="17" FontAttributes="Bold" />
+                    FontSize="18" FontAttributes="Bold" />
                 <Switch HorizontalOptions="EndAndExpand" IsToggled="{Binding Done}" />
             </StackLayout>
 
@@ -38,7 +38,7 @@
                 <Label
                     HorizontalOptions="StartAndExpand"
                     Text="Pin Task" 
-                    FontSize="17" FontAttributes="Bold" />
+                    FontSize="18" FontAttributes="Bold" />
                 <Switch  HorizontalOptions="EndAndExpand" IsToggled="{Binding IsPinned}" />
             </StackLayout>
 
@@ -46,7 +46,7 @@
                 <Label
                   HorizontalOptions="StartAndExpand"
                   Text="Mark Important" 
-                  FontSize="17" FontAttributes="Bold" />
+                  FontSize="18" FontAttributes="Bold" />
                 <Switch  HorizontalOptions="EndAndExpand" IsToggled="{Binding IsImportant}" />
             </StackLayout>
 

@@ -58,6 +58,7 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\done.png" />
+	  <None Remove="Resources\Images\donenew.png" />
 	  <None Remove="Resources\Images\flag.png" />
 	  <None Remove="Resources\Images\flag1.png" />
 	  <None Remove="Resources\Images\image.png" />
